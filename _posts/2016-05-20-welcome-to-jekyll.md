@@ -5,378 +5,184 @@ subtitle: Ce premier article parle de Vision par ordinateur et d'intelligence ar
 date: 2018-01-24 12:00:00
 author: Jeremy26
 ---
-# L’IA… Et le véhicule fut autonome !
 
-> [Discover this article in
-> English](https://medium.com/@jeremyscohen/ai-and-the-vehicle-went-autonomous-e176c73239c6)
+## L’IA… Et le véhicule fut autonome !
+>  [Discover this article in English](https://medium.com/@jeremyscohen/ai-and-the-vehicle-went-autonomous-e176c73239c6)
 
-![](https://cdn-images-1.medium.com/max/800/1*Cfu-D0fIVyE3ASwQBgpygw.png)
-<span class="figcaption_hack">Perception du monde par une voiture autonome</span>
+![Perception du monde par une voiture autonome](https://cdn-images-1.medium.com/max/2000/1*Cfu-D0fIVyE3ASwQBgpygw.png)
 
-Chaque année, [de plus en plus de voitures autonomes sont à l’essai sur nos
-routes](http://www.leparisien.fr/info-paris-ile-de-france-oise/transports/vehicules-autonomes-les-tests-se-multiplient-25-09-2017-7286301.php).
-Certaines proposent déjà leurs services restreints à certaines zones tandis que
-d’autres seront en circulation lorsque complètement autonomes. [Cet
-article](http://www.journaldunet.com/economie/transport/1203922-carte-tests-vehicules-autonomes-france/)
-contient une carte recensant les tests de véhicules autonomes en France. Tous ne
-sont pas conçus de la même façon. Pour repérer son environnement, certains
-utilisent seulement une **caméra** et des **radars** tandis que d’autres
-utilisent aussi des capteurs **Lidar** (laser). Passionné par le sujet, je me
-suis inscrit dans le [programme sur les voitures autonomes
-d’Udacity](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013),
-et j’ai complété [les deux premiers
-trimestres](https://medium.com/self-driving-cars/term-1-in-depth-on-udacitys-self-driving-car-curriculum-ffcf46af0c08).
+Chaque année, [de plus en plus de voitures autonomes sont à l’essai sur nos routes](http://www.leparisien.fr/info-paris-ile-de-france-oise/transports/vehicules-autonomes-les-tests-se-multiplient-25-09-2017-7286301.php). Certaines proposent déjà leurs services restreints à certaines zones tandis que d’autres seront en circulation lorsque complètement autonomes. [Cet article](http://www.journaldunet.com/economie/transport/1203922-carte-tests-vehicules-autonomes-france/) contient une carte recensant les tests de véhicules autonomes en France. Tous ne sont pas conçus de la même façon. Pour repérer son environnement, certains utilisent seulement une **caméra** et des **radars** tandis que d’autres utilisent aussi des capteurs **Lidar** (laser). Passionné par le sujet, je me suis inscrit dans le [programme sur les voitures autonomes d’Udacity](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013), et j’ai complété [les deux premiers trimestres](https://medium.com/self-driving-cars/term-1-in-depth-on-udacitys-self-driving-car-curriculum-ffcf46af0c08).
+>  **L’intelligence artificielle** est partout à bord des voitures autonomes, et en particulier dans la perception de l’environnement.
+>  **C*omment percevoir son environnement avec une caméra ?***
 
-> **L’intelligence artificielle** est partout à bord des voitures autonomes, et en
-> particulier dans la perception de l’environnement.
+L’image ci-dessous présente quatre grandes étapes du fonctionnement d’un véhicule autonome.
 
-> **Comment percevoir son environnement avec une caméra ?**
+![Fonctionnement d’un véhicule autonome](https://cdn-images-1.medium.com/max/2000/1*lwqYQTJsALti-_NV_ERd0A.png)
 
-*****
+* **Computer Vision **et **Sensor Fusion **sont appelés **Perception. **Il s’agit de la compréhension de l’environnement. 
+La **Computer Vision **(vision par ordinateur ) **utilise une caméra. **Cela permet de repérer des voitures, des piétons, des routes, …**
+**La **Sensor Fusion **(fusion de capteurs) **utilise et fusionne les données d’autres capteurs** **comme un Radar et un Lidar **pour compléter celles obtenues par la caméra. Cela permet d’estimer les positions et les vitesses des objets repérés par la caméra.
 
-L’image ci-dessous présente quatre grandes étapes du fonctionnement d’un
-véhicule autonome.
+* **Localization** est l’étape qui permet de localiser une voiture plus précisément qu’un GPS le ferait.
 
-![](https://cdn-images-1.medium.com/max/800/1*lwqYQTJsALti-_NV_ERd0A.png)
-<span class="figcaption_hack">Fonctionnement d’un véhicule autonome</span>
+* **Path Planning** implémente le cerveau d’un véhicule autonome. Un *Path Planner* utilise les données des deux premières étapes pour prédire ce que feront les véhicules, piétons, objets, autour de lui et générer des trajectoires pour aller d’un point A à un point B.
 
-* **Computer Vision **et** Sensor Fusion **sont appelés** Perception. **Il s’agit
-de la compréhension de l’environnement. <br> La **Computer Vision **(vision par
-ordinateur )** utilise une caméra. **Cela permet de repérer des voitures, des
-piétons, des routes, …****La** Sensor Fusion **(fusion de capteurs)** utilise et
-fusionne les données d’autres capteurs** **comme un Radar et un Lidar **pour
-compléter celles obtenues par la caméra. Cela permet d’estimer les positions et
-les vitesses des objets repérés par la caméra.
-* **Localization** est l’étape qui permet de localiser une voiture plus
-précisément qu’un GPS le ferait.
-* **Path Planning** implémente le cerveau d’un véhicule autonome. Un *Path
-Planner* utilise les données des deux premières étapes pour prédire ce que
-feront les véhicules, piétons, objets, autour de lui et générer des trajectoires
-pour aller d’un point A à un point B.
-* **Control** est l’étape finale. Cette étape se base sur la trajectoire créée et
-utilise des contrôleurs pour déplacer le véhicule.
+* **Control** est l’étape finale. Cette étape se base sur la trajectoire créée et utilise des contrôleurs pour déplacer le véhicule.
 
-*****
+### La Computer Vision
+> # La Computer Vision est une discipline permettant à un ordinateur équipé d’une caméra de comprendre son environnement.
 
-#### La Computer Vision
+Les techniques de vision par ordinateur sont utilisées dans les véhicules autonomes pour détecter des piétons ou d’autres objets, mais peuvent aussi être utilisées pour diagnostiquer des cancers en [cherchant des anomalies sur des](https://www.forbes.com/sites/bernardmarr/2017/05/16/how-ai-and-deep-learning-is-now-used-to-diagnose-cancer/#7cdb8222c783) images.
 
-> La Computer Vision est une discipline permettant à un ordinateur équipé d’une
-> caméra de comprendre son environnement.
+Elles vont de la détection de lignes et de couleurs de façon très classique à l’intelligence artificielle.
 
-Les techniques de vision par ordinateur sont utilisées dans les véhicules
-autonomes pour détecter des piétons ou d’autres objets, mais peuvent aussi être
-utilisées pour diagnostiquer des cancers en [cherchant des anomalies sur
-des](https://www.forbes.com/sites/bernardmarr/2017/05/16/how-ai-and-deep-learning-is-now-used-to-diagnose-cancer/#7cdb8222c783)
-images.
+La vision par ordinateur a démarré dans les années 50 , il s’agissait de retranscrire les formes de certains objets. La fin du siècle nous conduit à l’élaboration de techniques comme le [*filtre de Canny](https://fr.wikipedia.org/wiki/Filtre_de_Canny) *qui permet de distinguer l’évolution de la couleur dans une image.
 
-Elles vont de la détection de lignes et de couleurs de façon très classique à
-l’intelligence artificielle.
+![Application d’un filtre de Canny](https://cdn-images-1.medium.com/max/3072/1*urHD8A7zb-2OPqOmidA6lA.png)
 
-La vision par ordinateur a démarré dans les années 50 , il s’agissait de
-retranscrire les formes de certains objets. La fin du siècle nous conduit à
-l’élaboration de techniques comme le [filtre de
-Canny](https://fr.wikipedia.org/wiki/Filtre_de_Canny)* *qui permet de distinguer
-l’évolution de la couleur dans une image.
+En 2001, l’algorithme [*Viola-Jones](https://fr.wikipedia.org/wiki/Méthode_de_Viola_et_Jones)* démontre la capacité d’un ordinateur à reconnaître un visage.
 
-<span class="figcaption_hack">Application d’un filtre de Canny</span>
+![Histogram of Oriented Gradients](https://cdn-images-1.medium.com/max/2000/1*B1GcRcTmeNuYIt1hXN1b0A.png)
 
-En 2001, l’algorithme
-[Viola-Jones](https://fr.wikipedia.org/wiki/MÃ©thode_de_Viola_et_Jones) démontre
-la capacité d’un ordinateur à reconnaître un visage.
+Les années suivantes, le ***Machine Learning*** se popularise pour la détection d’objets avec l’usage répandu des caractéristiques ***HOG **(Histogram of Oriented Gradients)* et de classificateurs. L’objectif est d’entraîner un modèle à reconnaître les formes d’un objet en reconnaissant les différentes orientations (gradients). Les histogrammes de gradients orientés retiennent les formes et les direction de chaque pixel; puis fais une moyenne sur une zone plus large.
 
-<span class="figcaption_hack">Histogram of Oriented Gradients</span>
+Le ***Deep Learning ****(apprentissage profond)* est ensuite devenu très populaire pour ses performances, dû à l’arrivée de puissants **GPUs** *(Unités de Processeurs Graphiques permettants de faire des opérations en parallèle, et non les unes après les autres)* et à l’accumulation de **données**. Avant les GPUs, les algorithmes de *Deep Learning* ne fonctionnaient pas sur nos machines.
+>  La vision par ordinateur peut se faire par trois approches :
+>  **Sans intelligence artificielle** , en analysant les formes et les couleurs,
+**En Machine Learning**, en apprenant à partir de caractéristiques,
+**En Deep Learning, **en apprenant seul.
 
-Les années suivantes, le **Machine Learning** se popularise pour la détection
-d’objets avec l’usage répandu des caractéristiques **HOG*** (Histogram of
-Oriented Gradients)* et de classificateurs. L’objectif est d’entraîner un modèle
-à reconnaître les formes d’un objet en reconnaissant les différentes
-orientations (gradients). Les histogrammes de gradients orientés retiennent les
-formes et les direction de chaque pixel; puis fais une moyenne sur une zone plus
-large.
-
-Le **Deep Learning ***(apprentissage profond)* est ensuite devenu très populaire
-pour ses performances, dû à l’arrivée de puissants **GPUs** *(Unités de
-Processeurs Graphiques permettants de faire des opérations en parallèle, et non
-les unes après les autres)* et à l’accumulation de **données**. Avant les GPUs,
-les algorithmes de *Deep Learning* ne fonctionnaient pas sur nos machines.
-
-> La vision par ordinateur peut se faire par trois approches :
-
-> **Sans intelligence artificielle** , en analysant les formes et les
-> couleurs,<br> **En Machine Learning**, en apprenant à partir de
-caractéristiques,<br> **En Deep Learning, **en apprenant seul.
-
-*****
-
-#### Machine Learning
-
-> Le Machine Learning est une discipline utilisée dans la Computer Vision pour
-> apprendre à identifier des des formes.
+### Machine Learning
+> # Le Machine Learning est une discipline utilisée dans la Computer Vision pour apprendre à identifier des des formes.
 
 On distingue deux types d’apprentissage :
 
-* **L’** **apprentissage supervisé ***permet de créer des règles automatiquement à
-partir d’une base de données d’apprentissage.*
+* **L’** **apprentissage supervisé ***permet de créer des règles automatiquement à partir d’une base de données d’apprentissage.*
 
-On distingue :<br> La **classification** : Prédire si une donnée appartient à
-une classe ou une autre. (exemple : chien ou chat).<br> La **régression** :
-Prédire une donnée en fonction d’une autre.<br> (exemple : Le prix d’une maison
-à partir de sa taille ou de son code postal)
+On distingue :
+La **classification** : Prédire si une donnée appartient à une classe ou une autre. (exemple : chien ou chat).
+La **régression** : Prédire une donnée en fonction d’une autre.
+(exemple : Le prix d’une maison à partir de sa taille ou de son code postal)
 
-* **L’apprentissage non-supervisé*** signifie que l’on regroupe automatiquement
-des données similaires entre elles.*
+* ***L’apprentissage non-supervisé **signifie que l’on regroupe automatiquement des données similaires entre elles.*
 
-Nous distinguons quatre étapes dans le processus d’apprentissage et de
-prédiction d’un algorithme supervisé pour la détection de voitures.
+Nous distinguons quatre étapes dans le processus d’apprentissage et de prédiction d’un algorithme supervisé pour la détection de voitures.
 
-1.  La première est la **création d’une base de données d’images de voitures** et
-d’images de route. **L’apprentissage supervisé implique **d’indiquer **quelle
-image correspond à une voiture** et quelle image représente l’arrière plan. On
-parle de **labelling**.
+ 1. La première est la **création d’une base de données d’images de voitures** et d’images de route. **L’apprentissage supervisé implique **d’indiquer **quelle image correspond à une voiture** et quelle image représente l’arrière plan. On parle de **labelling**.
 
-<span class="figcaption_hack">Dataset</span>
+![Dataset](https://cdn-images-1.medium.com/max/2812/1*IHp6EwDsXPqvQP68UQwqKg.png)
 
-2. Pour voir quelles caractéristiques permettent d’identifier une voiture, nous
-soumettons notre image à **différents espaces de couleurs**. Nous récupérons la
-forme à l’aide de **HOG features**. <br> **L’image est transformée en vecteurs
-de caractéristiques ou features.**
+2. Pour voir quelles caractéristiques permettent d’identifier une voiture, nous soumettons notre image à **différents espaces de couleurs**. Nous récupérons la forme à l’aide de **HOG features**. 
+**L’image est transformée en vecteurs de caractéristiques ou features.**
 
-<span class="figcaption_hack">Extraction de HOG features et de caractéristiques de couleurs</span>
+![Extraction de HOG features et de caractéristiques de couleurs](https://cdn-images-1.medium.com/max/4012/1*5-t7x2l-vUV0uk9wsXLPZw.png)
 
-3. Ces vecteurs sont concaténés et **utilisés comme base d’entraînement**. Dans
-le graphe ci-dessous, les formes et couleurs** **sont indiqués sur les axes
-verticaux et horizontaux. <br> Nos classes sont nos points bleus (voiture) et
-oranges (non voiture). Il faut également choisir un classificateur.
+3. Ces vecteurs sont concaténés et **utilisés comme base d’entraînement**. Dans le graphe ci-dessous, les formes et couleurs ****sont indiqués sur les axes verticaux et horizontaux. 
+Nos classes sont nos points bleus (voiture) et oranges (non voiture). Il faut également choisir un classificateur.
+>  Un algorithme de Machine Learning a pour rôle de tracer une ligne séparant deux classes selon des caractéristiques. Les nouveaux points (croix blanche) sont ensuite prédits suivant leurs positions par rapport à la ligne. Plus il y a des données d’entraînement (en couleur) , plus la prédiction sera précise.
 
-> Un algorithme de Machine Learning a pour rôle de tracer une ligne séparant deux
-> classes selon des caractéristiques. Les nouveaux points (croix blanche) sont
-ensuite prédits suivant leurs positions par rapport à la ligne. Plus il y a des
-données d’entraînement (en couleur) , plus la prédiction sera précise.
+![Classification](https://cdn-images-1.medium.com/max/2000/1*V-Vksu09fZWiNOEuTJnFZg.png)
 
-<span class="figcaption_hack">Classification</span>
+4. La dernière étape de **prédictions **implémente un algorithme qui parcourt l’image, la convertit en vecteur suivant **les mêmes caractéristiques que pour l’entraînement. **Chaque partie de l’image est analysée et passée au classificateur qui encadre les voitures.
 
-4. La dernière étape de **prédictions **implémente un algorithme qui parcourt
-l’image, la convertit en vecteur suivant **les mêmes caractéristiques que pour
-l’entraînement. **Chaque partie de l’image est analysée et passée au
-classificateur qui encadre les voitures.
+![Prédiction](https://cdn-images-1.medium.com/max/4528/1*vfdhNyc_2fU52vs77gf2Pg.png)
+>  Les algorithmes de Machine Learning permettent de choisir les **caractéristiques **pour l’entraînement.
+>  Ces algorithmes sont aujourd’hui plutôt utilisés dans la manipulation de données que dans la détection d’images en raison de l’arrivée du Deep Learning et des réseaux neuronaux. De plus, la détection est lente et génère beaucoup de faux positifs. Pour les éliminer, il faut un grand nombre d’images d’arrière plan (routes, rues, …).
 
-<span class="figcaption_hack">Prédiction</span>
+### Les Réseaux Neuronaux
+> # Les réseaux neuronaux utilisent un algorithme de Machine Learning permettant de prendre des images en entrée et de retourner le nombre de voitures et leur position. L’algorithme simule le fonctionnent du cerveau humain en interconnectant des neurones artificiels.
 
-> Les algorithmes de Machine Learning permettent de choisir les **caractéristiques
-> **pour l’entraînement.
+![Un réseau neuronal (Machine Learning)](https://cdn-images-1.medium.com/max/2000/1*BMdnuQUqGEb_FSEmYIxw5g.jpeg)
 
-> Ces algorithmes sont aujourd’hui plutôt utilisés dans la manipulation de données
-> que dans la détection d’images en raison de l’arrivée du Deep Learning et des
-réseaux neuronaux. De plus, la détection est lente et génère beaucoup de faux
-positifs. Pour les éliminer, il faut un grand nombre d’images d’arrière plan
-(routes, rues, …).
+Dans le schéma ci-dessus, chaque cercle est la représentation d’un neurone, appelé **Perceptron**. Les entrées à gauche sont envoyées à une couche de neurones au centre. Chaque **connexion **entre les neurones a un **poids W **(l’importance donnée à un paramètre). Le but d’un algorithme est d’optimiser ces poids. Des opérations ont lieues dans chaque neurone de la couche centrale pour prédire une classe. Chaque classe est représentée par un neurone de sortie.
 
-*****
+![Fonctionnement d’un neurone artificiel](https://cdn-images-1.medium.com/max/2744/1*S5oFWrC50VvbPYnrc6iCNQ.png)
 
-#### Les Réseaux Neuronaux
+Dans chaque neurone, il y a un algorithme qui classifie une donnée selon des paramètres. En entraînant un modèle avec beaucoup de données, le réseau apprend quel poids a eu plus d’importance qu’un autre. L’objectif est de parvenir à une séparation parfaite des classes.
 
-> Les réseaux neuronaux utilisent un algorithme de Machine Learning permettant de
-> prendre des images en entrée et de retourner le nombre de voitures et leur
-position. L’algorithme simule le fonctionnent du cerveau humain en
-interconnectant des neurones artificiels.
+ <iframe src="https://medium.com/media/ec91e128204907db7463dc5c7591d26a" frameborder=0></iframe>
 
-<span class="figcaption_hack">Un réseau neuronal (Machine Learning)</span>
+Pour s’entraîner, le réseau va d’abord **initialiser des poids aléatoirement** et regarder si les points sont classifiés correctement. Une partie des points ne le seront pas, il ajuste alors les poids très légèrement dans un sens et regarde si l’erreur, calculée par une fonction, diminue. **Il répète l’opération des centaines de fois jusqu’à avoir une droite qui classifie correctement les données d’entraînement.**
 
-Dans le schéma ci-dessus, chaque cercle est la représentation d’un neurone,
-appelé **Perceptron**. Les entrées à gauche sont envoyées à une couche de
-neurones au centre. Chaque **connexion **entre les neurones a un **poids W
-**(l’importance donnée à un paramètre). Le but d’un algorithme est d’optimiser
-ces poids. Des opérations ont lieues dans chaque neurone de la couche centrale
-pour prédire une classe. Chaque classe est représentée par un neurone de sortie.
+![Somme de deux modèles linéaires pour obtenir un réseau neuronal](https://cdn-images-1.medium.com/max/2816/1*7JP32Coo8VXEpq41WenWrg.png)
 
-<span class="figcaption_hack">Fonctionnement d’un neurone artificiel</span>
-
-Dans chaque neurone, il y a un algorithme qui classifie une donnée selon des
-paramètres. En entraînant un modèle avec beaucoup de données, le réseau apprend
-quel poids a eu plus d’importance qu’un autre. L’objectif est de parvenir à une
-séparation parfaite des classes.
-
-<span class="figcaption_hack">Entraînement d’un réseau Neuronal pour de la classification</span>
-
-Pour s’entraîner, le réseau va d’abord **initialiser des poids aléatoirement**
-et regarder si les points sont classifiés correctement. Une partie des points ne
-le seront pas, il ajuste alors les poids très légèrement dans un sens et regarde
-si l’erreur, calculée par une fonction, diminue. **Il répète l’opération des
-centaines de fois jusqu’à avoir une droite qui classifie correctement les
-données d’entraînement.**
-
-<span class="figcaption_hack">Somme de deux modèles linéaires pour obtenir un réseau neuronal</span>
-
-Pour traiter des données non-linéaires, un réseau neuronal fait une somme de
-deux modèles linéaires et les combine. Ceci est dû au fait que le classificateur
-utilisé est différent des classificateurs de **Machine Learning** classiques, il
-utilise une [descente de
-gradients](https://www.youtube.com/watch?v=1j4bERmqmOU).
-
-> Si les réseaux neuronaux sont plus performants que les algorithmes classiques,
-> ils ont l’inconvénient d’être une boîte noire puisque nous ne choisissons pas
-les caractéristiques ni les poids. C’est l’algorithme qui les devine seul
-suivant nos données et notre labelling.
-
-*****
+Pour traiter des données non-linéaires, un réseau neuronal fait une somme de deux modèles linéaires et les combine. Ceci est dû au fait que le classificateur utilisé est différent des classificateurs de **Machine Learning** classiques, il utilise une [descente de gradients](https://www.youtube.com/watch?v=1j4bERmqmOU).
+>  Si les réseaux neuronaux sont plus performants que les algorithmes classiques, ils ont l’inconvénient d’être une boîte noire puisque nous ne choisissons pas les caractéristiques ni les poids. C’est l’algorithme qui les devine seul suivant nos données et notre labelling.
 
 **Qu’est ce que le Deep Learning ?**
+> # Les réseaux neuronaux sont plus performants que les algorithmes d’apprentissage classiques.
+> # Qu’est ce que le Deep Learning, et pourquoi fait-il tant parler de lui?
+>  *Le *Deep Learning *est l’implémentation de l’algorithme de *Machine Learning *“Réseaux Neuronaux” avec plus d’une couche au milieu.*
 
-> Les réseaux neuronaux sont plus performants que les algorithmes d’apprentissage
-> classiques.
+![Machine Learning vs Deep Learning](https://cdn-images-1.medium.com/max/2000/1*dnvGC-PORSoCo7VXT3PV_A.png)
 
-> Qu’est ce que le Deep Learning, et pourquoi fait-il tant parler de lui?
+Plusieurs couches dans un réseau neuronal donnent de meilleurs résultats sur des opérations plus complexes qu‘avec une seule couche. Avec plus de modèles pris en compte, il y a moins de points mal classifiés car moins de linéarité.
+Plus il y aura de paramètres et de données difficiles à traiter, plus un réseau profond sera utile et efficace.
 
-> *Le *Deep Learning* est l’implémentation de l’algorithme de *Machine Learning*
-> “Réseaux Neuronaux” avec plus d’une couche au milieu.*
+Il y a avant tout l’avantage d’être **multi-couches** : la **sortie d’un neurone** (probabilité d’être une classe) est utilisée en **entrée du neurone suivant**.
 
-<span class="figcaption_hack">Machine Learning vs Deep Learning</span>
+![Réseau Neuronal profond](https://cdn-images-1.medium.com/max/3060/1*L_dnZkPvG9NyLVww0mS5pg.png)
+>  Les *DNN (Deep Neural Networks)* sont très efficaces et sont utilisés aujourd’hui pour la plupart des problèmes complexes comme les assistants vocaux, l’analyse d’images, … Cette sous-partie du *Machine Learning *est plus performante que tous les autres algorithmes sur un champ très large de domaines.
 
-Plusieurs couches dans un réseau neuronal donnent de meilleurs résultats sur des
-opérations plus complexes qu‘avec une seule couche. Avec plus de modèles pris en
-compte, il y a moins de points mal classifiés car moins de linéarité.<br> Plus
-il y aura de paramètres et de données difficiles à traiter, plus un réseau
-profond sera utile et efficace.
+### Le Deep Learning et la reconnaissance d’images : Les CNN
+> # Le *Deep Learning *permet d’être plus performant que beaucoup d’algorithmes de *Machine Learning*. Au dela d’opérations linéaires simples, il est possible de l’adapter à des problèmes particuliers, comme l’**analyse d’images**.
 
-Il y a avant tout l’avantage d’être **multi-couches** : la **sortie d’un
-neurone** (probabilité d’être une classe) est utilisée en **entrée du neurone
-suivant**.
+En analyse d’images, on parle généralement de Deep Learning sous le terme CNN : Convolutional Neural Networks ou ConvNets. Les CNN sont des réseaux neuronaux qui partagent leurs poids dans le réseau .
 
-<span class="figcaption_hack">Réseau Neuronal profond</span>
+Ceci est géré par des opérations appelées **convolutions. **Il s’agit de **faire passer une petite partie de l’image à travers un réseau neuronal**, et de parcourir toute l’image en ne retenant que la forme de l’objet que nous souhaitons apprendre. **Nous extrayons les caractéristiques de l’objet à chaque opération.** Le poids de cet objet est ensuite partagé à travers tout le réseau et est optimisé à chaque nouvelle image.
+>  Sur plusieurs images, nous reconnaissons les formes de notre objet qui sont récurrentes et nous entraînons notre réseau sur ces formes.
 
-> Les *DNN (Deep Neural Networks)* sont très efficaces et sont utilisés
-> aujourd’hui pour la plupart des problèmes complexes comme les assistants vocaux,
-l’analyse d’images, … Cette sous-partie du *Machine Learning *est plus
-performante que tous les autres algorithmes sur un champ très large de domaines.
+![Exemple d’une convolution](https://cdn-images-1.medium.com/max/3888/1*akAOFHTRzT6Ghn5PtKQofw.png)
 
-*****
+Pour reconnaître un objet, les CNN permettent aux différentes couches d’apprendre selon des niveaux de complexité.
 
-#### Le Deep Learning et la reconnaissance d’images : Les CNN
+![Fonctionnement d’un CNN](https://cdn-images-1.medium.com/max/2000/1*fQPS6ZGiCteIdGDgDBZQ4g.jpeg)
 
-> Le *Deep Learning *permet d’être plus performant que beaucoup d’algorithmes de
-> *Machine Learning*. Au dela d’opérations linéaires simples, il est possible de
-l’adapter à des problèmes particuliers, comme l’**analyse d’images**.
+Dans notre exemple, la première couche apprendra les formes simples comme les cercles et les lignes tandis que la suivante apprendra des formes un peu plus complexes, jusqu’à apprendre à quoi ressemble notre objet dans sa totalité.
+>  A la différence du Machine Learning où nous choisissions des caractéristiques manuellement, un CNN apprend seul quelles caractéristiques choisir ici, et quelles formes retenir. A la différence d’un réseau neuronal simple, nous pouvons traiter des opérations complexes comme l’analyse d’images. L’entraînement est bien plus long qu’en Machine Learning, il peut prendre plusieurs jours. La détection est en revanche très rapide et beaucoup plus fiable.
 
-En analyse d’images, on parle généralement de Deep Learning sous le terme CNN :
-Convolutional Neural Networks ou ConvNets. Les CNN sont des réseaux neuronaux
-qui partagent leurs poids dans le réseau .
+### Résultats
+> # *Mes projets avec **Udacity **m’ont permis de tester la vision par ordinateur avec trois approches : la première consiste à repérer des lignes sur une route, la deuxième consiste à détecter des véhicules. La dernière utilise du Deep Learning pour prédire quel angle adopter selon la situation.*
 
-Ceci est géré par des opérations appelées **convolutions. **Il s’agit de **faire
-passer une petite partie de l’image à travers un réseau neuronal**, et de
-parcourir toute l’image en ne retenant que la forme de l’objet que nous
-souhaitons apprendre. **Nous extrayons les caractéristiques de l’objet à chaque
-opération.** Le poids de cet objet est ensuite partagé à travers tout le réseau
-et est optimisé à chaque nouvelle image.
+ <iframe src="https://medium.com/media/afa9d0be563aacd42f3dfa5103949b00" frameborder=0></iframe>
 
-> Sur plusieurs images, nous reconnaissons les formes de notre objet qui sont
-> récurrentes et nous entraînons notre réseau sur ces formes.
+ <iframe src="https://medium.com/media/4091c4fc08d615b6f29a6746c1c80f10" frameborder=0></iframe>
 
-<span class="figcaption_hack">Exemple d’une convolution</span>
+ <iframe src="https://medium.com/media/11a07fbdcaad3997805d802137ded099" frameborder=0></iframe>
 
-Pour reconnaître un objet, les CNN permettent aux différentes couches
-d’apprendre selon des niveaux de complexité.
+### Conclusion
+> # *Le *Deep Learning *est une partie du *Machine Learning*, puisqu’il est l’implémentation d’un de ses algorithmes avec plusieurs couches au lieu d’une seule. Cet algorithme appelé **réseaux neuronal **est assez différent des autres puisqu’il devine seul les caractéristiques à retenir tandis que les autres algorithmes de *Machine Learning *sont nourris par des caractéristiques que nous lui donnons.*
 
-<span class="figcaption_hack">Fonctionnement d’un CNN</span>
+![Machine Learning vs Deep Learning](https://cdn-images-1.medium.com/max/4164/1*Ly12NtZeA8ur97f5AThYiw.png)
 
-Dans notre exemple, la première couche apprendra les formes simples comme les
-cercles et les lignes tandis que la suivante apprendra des formes un peu plus
-complexes, jusqu’à apprendre à quoi ressemble notre objet dans sa totalité.
+Aujourd’hui, le *Deep Learning* est plus performant que le *Machine Learning* pour les opérations complexes comme la détection d’images en temps réel.Si les opérations sont simples, implémenter un *DNN (Deep Neural Network)* n’est pas forcément utile et entraîne un temps plus long des opérations.
 
-> A la différence du Machine Learning où nous choisissions des caractéristiques
-> manuellement, un CNN apprend seul quelles caractéristiques choisir ici, et
-quelles formes retenir. A la différence d’un réseau neuronal simple, nous
-pouvons traiter des opérations complexes comme l’analyse d’images.
-L’entraînement est bien plus long qu’en Machine Learning, il peut prendre
-plusieurs jours. La détection est en revanche très rapide et beaucoup plus
-fiable.
+Les disciplines sont très différentes, le *Machine Learning* permet de faire des opérations simples rapidement comme des régressions linéaires ou des arbres de décision tandis que les algorithmes de *Deep Learning* permettent de faire avancer un cran plus loin nos capacités à programmer des robots performants.
 
-*****
+Aujourd’hui, des techniques de *Deep Learning* comme la segmentation sémantique permettent d’identifier quel pixel appartient à quel objet.
 
-#### Résultats
-
-> *Mes projets avec ***Udacity*** m’ont permis de tester la vision par ordinateur
-> avec trois approches : la première consiste à repérer des lignes sur une route,
-la deuxième consiste à détecter des véhicules. La dernière utilise du Deep
-Learning pour prédire quel angle adopter selon la situation.*
-
-<span class="figcaption_hack">Utilisation de techniques de Computer Vision sans IA pour la détection de routes</span>
-
-<span class="figcaption_hack">Utilisation du Machine Learning dans la détection de véhicules</span>
-
-<span class="figcaption_hack">Utilisation du Deep Learning pour reproduire la conduite humaine</span>
-
-*****
-
-#### Conclusion
-
-> *Le *Deep Learning* est une partie du *Machine Learning*, puisqu’il est
-> l’implémentation d’un de ses algorithmes avec plusieurs couches au lieu d’une
-seule. Cet algorithme appelé ***réseaux neuronal*** est assez différent des
-autres puisqu’il devine seul les caractéristiques à retenir tandis que les
-autres algorithmes de *Machine Learning* sont nourris par des caractéristiques
-que nous lui donnons.*
-
-<span class="figcaption_hack">Machine Learning vs Deep Learning</span>
-
-Aujourd’hui, le *Deep Learning* est plus performant que le *Machine Learning*
-pour les opérations complexes comme la détection d’images en temps réel.Si les
-opérations sont simples, implémenter un *DNN (Deep Neural Network)* n’est pas
-forcément utile et entraîne un temps plus long des opérations.
-
-Les disciplines sont très différentes, le *Machine Learning* permet de faire des
-opérations simples rapidement comme des régressions linéaires ou des arbres de
-décision tandis que les algorithmes de *Deep Learning* permettent de faire
-avancer un cran plus loin nos capacités à programmer des robots performants.
-
-Aujourd’hui, des techniques de *Deep Learning* comme la segmentation sémantique
-permettent d’identifier quel pixel appartient à quel objet.
-
-<span class="figcaption_hack">Techniques avancées de Deep Learning (segmentation sémantique)</span>
-
-> Jeremy Cohen.
+![Techniques avancées de Deep Learning (segmentation sémantique)](https://cdn-images-1.medium.com/max/2624/1*KICInky28yGdU9T45kIL5Q.jpeg)
+> # Jeremy Cohen.
 
 [→ Connect on LinkedIn](https://www.linkedin.com/in/jeremycohen2626/)
 
-La suite sur[ la fusion de
-capteurs](https://medium.com/@jeremyscohen/la-fusion-de-capteurs-587f91a1423a),
-[la
-localisation](https://medium.com/@jeremyscohen/la-localisation-pour-les-voitures-autonomes-8e84642c8f03),
-[la navigation
-autonome](https://medium.com/@jeremyscohen/les-voitures-autonomes-peuvent-elles-penser-36bded0e8eed),
-[le
-contrôle](https://medium.com/@jeremyscohen/la-derniÃ¨re-Ã©tape-contrÃ´le-6bdbb3bb1017)
-et [l’intégration
-finale](https://medium.com/@jeremyscohen/voitures-autonomes-mode-demploi-b9af029b4c1c).
+La suite sur [la fusion de capteurs](https://medium.com/@jeremyscohen/la-fusion-de-capteurs-587f91a1423a), [la localisation](https://medium.com/@jeremyscohen/la-localisation-pour-les-voitures-autonomes-8e84642c8f03), [la navigation autonome](https://medium.com/@jeremyscohen/les-voitures-autonomes-peuvent-elles-penser-36bded0e8eed), [le contrôle](https://medium.com/@jeremyscohen/la-dernière-étape-contrôle-6bdbb3bb1017) et [l’intégration finale](https://medium.com/@jeremyscohen/voitures-autonomes-mode-demploi-b9af029b4c1c).
 
-*****
-
-### Références
+## Références
 
 * [Udacity Self-driving Car Nanodegree Program](https://udacity.com/drive)
 
-#### Projets GitHub de Computer Vision (rapports inclus)
+### Projets GitHub de Computer Vision (rapports inclus)
 
-* Détection de lignes utilisant des filtres de Canny :
-[lane-lines](https://github.com/Jeremy26/lane-lines)
-* Détection de lignes utilisant des opérations plus avancées :
-[advanced-lane-lines](https://github.com/Jeremy26/advanced-lane-lines)
-* Classification de panneaux de signalisation avec *TensorFlow* :
-[traffic-signs](https://github.com/Jeremy26/traffic-signs)
-* Mémorisation d’un parcours et conduite autonome par caméra avec *Keras* :
-[behavioral-cloning](https://github.com/Jeremy26/behavioral-cloning)
-* Détection de véhicules en Machine Learning :[
-vehicle-detection](https://github.com/Jeremy26/vehicle-detection)
-* Algorithme de détection de free-space :
-[semantic-segmentation](https://github.com/Jeremy26/semantic-segmentation)
+* Détection de lignes utilisant des filtres de Canny : [lane-lines](https://github.com/Jeremy26/lane-lines)
 
-* [Self Driving Cars](https://medium.com/tag/self-driving-cars?source=post)
-* [Artificial
-Intelligence](https://medium.com/tag/artificial-intelligence?source=post)
-* [Machine Learning](https://medium.com/tag/machine-learning?source=post)
-* [Deep Learning](https://medium.com/tag/deep-learning?source=post)
-* [Computer Vision](https://medium.com/tag/computer-vision?source=post)
+* Détection de lignes utilisant des opérations plus avancées : [advanced-lane-lines](https://github.com/Jeremy26/advanced-lane-lines)
 
-### [Jeremy S. Cohen](https://medium.com/@jeremyscohen)
+* Classification de panneaux de signalisation avec *TensorFlow* : [traffic-signs](https://github.com/Jeremy26/traffic-signs)
 
-AI & Self-Driving Car Engineer
+* Mémorisation d’un parcours et conduite autonome par caméra avec *Keras* : [behavioral-cloning](https://github.com/Jeremy26/behavioral-cloning)
+
+* Détection de véhicules en Machine Learning : [vehicle-detection](https://github.com/Jeremy26/vehicle-detection)
+
+* Algorithme de détection de free-space : [semantic-segmentation](https://github.com/Jeremy26/semantic-segmentation)
 
