@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <title>Jeremy Cohen</title>
-
+	<link rel="shortcut icon" href="img/img/favicon.ico" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -213,7 +213,6 @@
 	
 	  <!-- Slideshow container -->
 	<div class="slideshow-container">
-
 	  <!-- Full-width images with number and caption text -->
 	  <div class="mySlides fade">
 	    <div class="numbertext">1 / 6</div>
