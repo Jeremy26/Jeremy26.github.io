@@ -1,0 +1,55 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+<!-- Slider Start -->
+<section id="global-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Comment marche une voiture autonome ?</h1>
+          <p>Cette série d'articles explique le fonctionnement d'un véhicule autonome de la Perception au Contrôle en passant par les algorithmes de décision et l'intelligence artificielle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2> Computer Vision </h2>
+<blockquote class="embedly-card"><h4><a href="https://medium.com/@jeremyscohen/lia-et-le-v%C3%A9hicule-fut-autonome-2abd8a348eb5">L'IA... Et le véhicule fut autonome ! - Jeremy S. Cohen - Medium</a></h4><p>Discover this article in English Chaque année, de plus en plus de voitures autonomes sont à l'essai sur nos routes. Certaines proposent déjà leurs services restreints à certaines zones tandis que d'autres seront en circulation lorsque complètement autonomes. Cet article contient une carte recensant les tests de véhicules autonomes en France.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+<h2> Fusion de Capteurs </h2>
+<blockquote class="embedly-card"><h4><a href="https://medium.com/@jeremyscohen/la-fusion-de-capteurs-587f91a1423a">La fusion de capteurs - Jeremy S. Cohen - Medium</a></h4><p>L'algorithme utilisé pour fusionner les données s'appelle un filtre de Kalman . Le filtre de Kalman est un des algorithmes les plus populaires dans la fusion de données. Inventé en 1960 par Rudolph Kalman, il est aujourd'hui utilisé dans nos téléphones ou les satellites pour la navigation et le tracking.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+<h2> Localisation </h2>
+<blockquote class="embedly-card"><h4><a href="https://medium.com/@jeremyscohen/la-localisation-pour-les-voitures-autonomes-8e84642c8f03">Les voitures autonomes et la localisation - Jeremy S. Cohen - Medium</a></h4><p>Un filtre particulaire est une autre implémentation d'un filtre bayésien. Dans un filtre particulaire, nous créons des particules dans toute la zone définie par le GPS et nous assignons à chaque particule un poids. Le poids d'une particule représente la probabilité que notre véhicule soit à l'endroit de la particule.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+<h2> Navigation </h2>
+<blockquote class="embedly-card"><h4><a href="https://medium.com/@jeremyscohen/les-voitures-autonomes-peuvent-elles-penser-36bded0e8eed">Les voitures autonomes peuvent-elles penser ? - Jeremy S. Cohen - Medium</a></h4><p>Discover this article in English La Navigation Autonome Cet article fait suite aux articles : - l'IA...Et le véhicule fut autonome - La fusion de capteurs - Les voitures autonomes et la localisation Nous nous situons désormais à l'étape Path Planning dans laquelle notre voiture utilise sa connaissance de l'environnement et de sa position pour planifier des trajectoires.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+<h2> Contrôle </h2>
+<blockquote class="embedly-card"><h4><a href="https://medium.com/@jeremyscohen/la-derni%C3%A8re-%C3%A9tape-contr%C3%B4le-6bdbb3bb1017">La dernière étape : Contrôle - Jeremy S. Cohen - Medium</a></h4><p>Discover this article in English Cet article fait suite aux articles :- l'IA...Et le véhicule fut autonome - La fusion de capteurs - Les voitures autonomes et la localisation - Les voitures autonomes peuvent-elles penser ? Il s'agit désormais de la dernière étape.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+<h2> Mode d'emploi </h2>
+<blockquote class="embedly-card"><h4><a href="https://medium.com/@jeremyscohen/voitures-autonomes-mode-demploi-b9af029b4c1c">Voitures autonomes - Mode d'emploi - Jeremy S. Cohen - Medium</a></h4><p>Le siècle précédent fut marqué par l'arrivée de la voiture qui transforma complètement notre société. Les villes ont été construites pour y intégrer les voitures. Un culte est né. Pendant plus de 100 ans, des milliers d'entreprises se sont créées autour de la voiture, du transport à la restauration rapide sur autoroute.</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+<!--
+{% for post in site.posts %}
+<div class="post-area">
+  <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>
+  <p class="post-date">{{ post.date | date_to_long_string }}</p>
+  <p>
+    {{ post.content | strip_html | truncatewords: 50 }}
+  </p>
+</div>
+{% endfor %}
+!-->

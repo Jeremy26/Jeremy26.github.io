@@ -1,0 +1,186 @@
+---
+layout: page
+title: Jeremy Cohen
+permalink: /
+---
+
+<!-- Slider Start -->
+<section id="slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="block">
+          <h1 class="animated fadeInUp">JEREMY COHEN </h1>
+          <p class="animated fadeInUp">Welcome to my personal page ! I am an Artificial Intelligence and Self-Driving Cars Engineer. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Wrapper Start -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>Who Am I ? </h2>
+            <p> I am three things : an <b>Engineer in Internet of Things, Self-Driving Cars and Artificial Intelligence</b>; a <b> continuous learner </b> and <b> a community builder (School of AI) </b></p>
+          </div>
+          <h2> About me </h2>
+          <p> In May 2017, I enrolled in the Udacity Self-Driving Car Engineer Nanodegree Program. From there, I decided that I wanted to work on the most cutting-edge projects we can have to make innovation a reality. I work at ISFM (Intelligent Systems for Mobility) as a self-driving car engineer and I am building an AI community in Paris called the Paris School of AI. </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="img/photo.png" alt="Img">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+<section id="feature">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-6">
+      <h2>SELF-DRIVING CAR PROJECTS</h2>
+      <p>The projects I built with Udacity lead me to write blogs and to get a job in the field. </p>
+      <p>These projects are about the four key elements of a self-driving car : Perception, Localization, Planning and Control.</p>
+      <a href="#" class="btn btn-view-works">View Works</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Service Start -->
+<section id="service">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <p>I can help with : </p>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="icon ion-coffee"></i>
+          <h4>Kickstart</h4>
+          <p> I can help an Engineer start his Machine Learning journey and get a job in the field thanks to the Paris School of AI ! </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="ion-compass"></i>
+          <h4>Launch an AI service</h4>
+          <p>I can build an Artificial Intelligence with your teams and help you make AI happen</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="ion-image"></i>
+          <h4>What is AI ? </h4>
+          <p>Are you lost ? I can fix that </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="ion-bug"></i>
+          <h4>Start Up</h4>
+          <p>You want to build the next big thing ? I would be glad to help you on this amazing adventure ! </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="ion-headphone"></i>
+          <h4>Robotics</h4>
+          <p>I can help calibrate sensors and make sure every sensors work well in a robot. </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="ion-leaf"></i>
+          <h4>Development</h4>
+          <p> I can develop algorithms based on robotics, AI, ML, DL and reinforcement learning</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="ion-planet"></i>
+          <h4>What is AI ? further</h4>
+          <p>You know a little bit about AI; but not enough... How to make it real in your company and win money with it ?</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="ion-earth"></i>
+          <h4>AI Training & Testing</h4>
+          <p>I do have a GPU </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Call to action Start -->
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2>Interested ? </h2>
+          <p>Look at my blog and check on Paris School of AI. I you like what you see, don't hesitate to message me ! </p>
+          <a class="btn btn-default btn-call-to-action" href="#" >Make AI happen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Content Start -->
+<section id="testimonial">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center">
+        <h2>Fun Facts About Me</h2>
+        <p>Too many things, let's have a coffee and I'll tell you all about it</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        {% if site.data.funfacts.size > 0 %}
+        <div class="block">
+          {% for ff in site.data.funfacts %}
+          <ul class="counter-box clearfix">
+            <li>
+              <div class="block">
+                <i class="{{ ff.icon }}"></i>
+                <h4 class="counter">{{ ff.counter }}</h4>
+                <span>{{ ff.text }}</span>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+      <div class="col-md-6">
+        {% if site.data.testimonials.size > 0 %}
+        <div class="testimonial-carousel">
+          <div id="testimonial-slider" class="owl-carousel">
+            {% for tm in site.data.testimonials %}
+            <div>
+                <img src="img/cotation.png" alt="IMG">
+                <p>{{ tm.testimonial }}</p>
+                <div class="user">
+                  <img src="{{ tm.image }}" alt="Pepole">
+                  <p><span>{{ tm.name }}</span> {{ tm.title }}</p>
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
