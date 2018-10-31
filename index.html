@@ -250,55 +250,24 @@
     <!-- Blog -->
     <section id="blog">
       <div class="container">
+
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Blogging</h2>
             <h3 class="section-subheading text-muted">Series of articles on Self-Driving Car Technology</h3>
           </div>
         </div>
-	
-	  <!-- Slideshow container -->
-	<div class="slideshow-container">
-	  <!-- Full-width images with number and caption text -->
-	  <div class="mySlides fade">
-	    <div class="numbertext">1 / 6</div>
-	    <img src="img/blog/cv.png" style="width:50%">
-	    <div class="text">Caption Text</div>
-	  </div>
+	<div class="slides" align="center">
+	<a href = "https://medium.com/@jeremyscohen/ai-and-the-vehicle-went-autonomous-e176c73239c6" target="_blank"><img class="mySlides" src="img/blog/cv.png"></a>
+	<a href = "https://medium.com/@jeremyscohen/sensor-fusion-90135614fde6" target="_blank"><img class="mySlides" src="img/blog/sf.png"></a>
+	<a href = "https://medium.com/@jeremyscohen/self-driving-car-localization-f800d4d8da49" target="_blank"><img class="mySlides" src="img/blog/loc.png"></a>
+	<a href = "https://medium.com/@jeremyscohen/can-self-driving-car-think-6c9e8d939d60" target="_blank"><img class="mySlides" src="img/blog/plan.png"></a>
+	<a href = "https://medium.com/@jeremyscohen/the-final-step-control-783467095138" target="_blank"><img class="mySlides" src="img/blog/contr.png"></a>
+	<a href = "https://medium.com/@jeremyscohen/self-driving-cars-the-guide-f1f427b9656b" target="_blank"><img class="mySlides" src="img/blog/ros.png"></a>
+      </div>
 
-	  <div class="mySlides fade">
-	    <div class="numbertext">2 / 6</div>
-	    <img src="img/blog/sf.png" style="width:50%">
-	    <div class="text">Caption Two</div>
-	  </div>
-
-	  <div class="mySlides fade">
-	    <div class="numbertext">3 / 6</div>
-	    <img src="img/blog/loc.png" style="width:50%">
-	    <div class="text">Caption Three</div>
-	  </div>
-	  <div class="mySlides fade">
-	    <div class="numbertext">4 / 6</div>
-	    <img src="img/blog/plan.jpeg" style="width:50%">
-	    <div class="text">Caption Four</div>
-	  </div>
-	  <div class="mySlides fade">
-	    <div class="numbertext">5 / 6</div>
-	    <img src="img/blog/contr.jpeg" style="width:50%">
-	    <div class="text">Caption Five</div>
-	  </div>
-	  <div class="mySlides fade">
-	    <div class="numbertext">6 / 6</div>
-	    <img src="img/blog/ros.jpeg" style="width:50%">
-	    <div class="text">Caption Six</div>
-	  </div>
-
-	  <!-- Next and previous buttons -->
-	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-	</div>
-	<br>
-
+	<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
 	<!-- The dots/circles -->
 	<div style="text-align:center">
 	  <span class="dot" onclick="currentSlide(1)"></span> 
@@ -308,8 +277,6 @@
 	  <span class="dot" onclick="currentSlide(5)"></span> 
 	  <span class="dot" onclick="currentSlide(6)"></span> 
 	</div>
-
-      </div>
     </section>
 
 
@@ -617,7 +584,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-
+    
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="js/multislider.js"></script>
   </body>
+
 
 </html>
